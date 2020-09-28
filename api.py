@@ -66,10 +66,12 @@ def primary_color(img):
             color_table[color(pixel)] += 1
 
     maxe = max(color_table)
-    i = 0
+    i = -1
     while i < len(color_table):
+        i+=1
         if color_table[i] == maxe:
             break
+            
     # print(color_code[i])
     return color_code[i]
 
@@ -84,8 +86,9 @@ def border_color(img):
     for pixel in img[255]:
         color_table[color(pixel)] += 1
     maxe = max(color_table)
-    i = 0
+    i = -1
     while i < len(color_table):
+        i+=1
         if color_table[i] == maxe:
             break
     # print(color_code[i])
